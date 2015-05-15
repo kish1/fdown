@@ -1,0 +1,8 @@
+iptables -A OUTPUT -p tcp --tcp-flags RST RST -j DROP
+
+python_binary=$(which python)
+python_script='fdown.py'
+
+$python_binary $python_script $1
+
+iptables -D OUTPUT -p tcp --tcp-flags RST RST -j DROP

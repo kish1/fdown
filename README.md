@@ -2,6 +2,7 @@
 A simple HTTP-based file downloader for Linux written in Python. Achieves 80-90% of WGET's efficiency.
 
 Overview:
+
  fdown is a non-interactive HTTP-based file downloader for Linux constructed using 
  raw sockets (POSIX/Berkley Sockets API) in Python 2.7.
  Originally built for an academic project in a Networks course.
@@ -13,7 +14,7 @@ Execution:
   TCP packets. Do not run this program if this can cause your computer to become vulnerable during 
   execution.
 
-./fdown [URL]
+./fdown_[URL]
 
 # Development Details
 High level approach:

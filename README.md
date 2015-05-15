@@ -14,7 +14,7 @@ A simple HTTP-based file downloader for Linux written in Python. Achieves 80-90%
   TCP packets. Do not run this program if this can cause your computer to become vulnerable during 
   execution.
 
-_./fdown _[_URL_]_
+_./fdown [URL]_
 
 # Development Details
 **High level approach:**

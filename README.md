@@ -33,10 +33,10 @@ Challenges faced:
   I implemented a min-heap based technique to order the packets based on the sequence numbers.
 
 Execution:
--This program requires root privileges to execute and hence must be executed using su or sudo.
--NOTE: This program uses TCP over raw sockets. In order to accomodate this, an iptables rule
- is added temporarily during program execution to drop all RST packets to unsolicited incoming 
- TCP packets. Do not run this program if this can cause your computer to become vulnerable during 
- execution.
+- This program requires root privileges to execute and hence must be executed using su or sudo.
+- NOTE: This program uses TCP over raw sockets. In order to accomodate this, an iptables rule
+  is added temporarily during program execution to drop all RST packets to unsolicited incoming 
+  TCP packets. Do not run this program if this can cause your computer to become vulnerable during 
+  execution.
 
  ./fdown [URL]

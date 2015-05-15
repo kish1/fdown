@@ -3,8 +3,19 @@ A simple HTTP-based file downloader for Linux written in Python. Achieves 80-90%
 
 Overview:
 fdown is a non-interactive HTTP-based file downloader for Linux constructed using 
-raw sockets (POSIX/Berkley Sockets API) in Python 2.7. 
+raw sockets (POSIX/Berkley Sockets API) in Python 2.7.
+Originally built for an academic project in a Networks course.
 
+Execution:
+- This program requires root privileges to execute and hence must be executed using su or sudo.
+- NOTE: This program uses TCP over raw sockets. In order to accomodate this, an iptables rule
+  is added temporarily during program execution to drop all RST packets to unsolicited incoming 
+  TCP packets. Do not run this program if this can cause your computer to become vulnerable during 
+  execution.
+
+./fdown [URL]
+
+# Development Details
 High level approach:
 - To construct a GET request from the given URL.
 - To construct TCP and IP headers based on their RFCs and to use raw sockets
@@ -31,12 +42,3 @@ Challenges faced:
   got fixed when I added an empty string as payload.
 - Ordering out-of-order incoming packets was non-trivial and had to be done efficiently.
   I implemented a min-heap based technique to order the packets based on the sequence numbers.
-
-Execution:
-- This program requires root privileges to execute and hence must be executed using su or sudo.
-- NOTE: This program uses TCP over raw sockets. In order to accomodate this, an iptables rule
-  is added temporarily during program execution to drop all RST packets to unsolicited incoming 
-  TCP packets. Do not run this program if this can cause your computer to become vulnerable during 
-  execution.
-
-./fdown [URL]

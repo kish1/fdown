@@ -82,7 +82,7 @@ class tcp():
 		self.dst_port = dst_port           # Destination Port
 		self.seq_num = seq_num             # Sequence Number
 		self.ack_num = ack_num             # Acknowledgement Number
-		self.offset = 5            		   # Data offset
+		self.offset = 5            	   # Data offset 
 		self.reserved = 0                  # Reserved
 		self.urg = 0                       # Urgent Pointer
 		self.ack = 1                       # ACK flag

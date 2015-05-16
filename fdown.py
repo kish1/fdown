@@ -1,3 +1,5 @@
+# Python Version: 2.7
+
 # imports
 import socket
 import urlparse
